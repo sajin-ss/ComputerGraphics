@@ -5,24 +5,24 @@
 
 using namespace std;
 
-void lineDDA(float x1, float y1, float x2, float y2)
+void lineDDA(int x1, int y1, int x2, int y2)
 {
 	int steps;
-	float xInc, yInc;
+	int xInc, yInc;
 
-	float x = x1;
-	float y = y1;
+	int x = x1;
+	int y = y1;
 
-	float dx = x2 - x1;
-	float dy = y2 - y1;
+	int dx = x2 - x1;
+	int dy = y2 - y1;
 
 	if (abs(dx) > abs(dy))
 		steps = abs(dx);
 	else
 		steps = abs(dy);
  
-	xInc = dx / (float) steps;
-	yInc = dy / (float) steps;
+	xInc = dx / (int) steps;
+	yInc = dy / (int) steps;
 
 	putpixel(ROUND(x), ROUND(y), 1);
 	
@@ -42,7 +42,7 @@ int main()
     int gd=DETECT,gm; 
 	initgraph(&gd,&gm,NULL);
 
-	float x1, y1, x2, y2;
+	int x1, y1, x2, y2;
 	cout << endl << "Enter point 1 : ";
 	cin >> x1 >> y1;
 	cout << endl << "Enter point 2 : ";
